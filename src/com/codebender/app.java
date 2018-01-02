@@ -803,49 +803,104 @@ public void dClikedCtrue(){
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (callq == 1 && A.isFocusable()) {
-
+                   Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
                 } else if (callq == 2 && A.isFocusable()) {
-
-
+                   Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
                 } else if (callq == 3 && A.isFocusable()) {
-
-
+                     Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
                 }else if (callq == 4 && A.isFocusable()) {
-
+                    Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
                 } else if (callq == 5 && A.isFocusable()) {
+                   Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
 
                 } else if (callq == 6 && A.isFocusable()) {
+                     Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
 
                 } else if (callq == 7 && A.isFocusable()) {
+                    Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
 
                 } else if (callq == 8 && A.isFocusable()) {
+                    Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
+
 
 
                 } else if (callq == 9 && A.isFocusable()) {
+                    Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
 
                 } else if (callq == 10 && A.isFocusable()) {
 
+                    Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
                 } else if (callq == 11 && A.isFocusable()) {
+                    Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
 
                 } else if (callq == 12 && A.isFocusable()) {
+                    Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
 
                 } else if (callq == 13 && A.isFocusable()) {
+                    Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
 
                 } else if (callq == 14 && A.isFocusable()) {
 
+                    Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
                 } else if (callq == 15 && A.isFocusable()) {
 
+                    Atrue();
+                    aClickedBtrue();
+                    aClickedCtrue();
+                    aClickedDtrue();
 
                 }
             }
@@ -856,50 +911,97 @@ public void dClikedCtrue(){
             @Override
             public void mouseClicked(MouseEvent e) {
                if (callq == 1 && B.isFocusable()) {
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
 
 
                 } else if (callq == 2 && B.isFocusable()) {
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
 
 
                 } else if (callq == 3 && B.isFocusable()) {
 
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
                 }else if (callq == 4 && B.isFocusable()) {
 
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
                 } else if (callq == 5 && B.isFocusable()) {
 
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
                 } else if (callq == 6 && B.isFocusable()) {
 
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
                 } else if (callq == 7 && B.isFocusable()) {
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
 
                 } else if (callq == 8 && B.isFocusable()) {
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
 
                 } else if (callq == 9 && B.isFocusable()) {
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
 
                 } else if (callq == 10 && B.isFocusable()) {
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
 
                 } else if (callq == 11 && B.isFocusable()) {
 
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
                 } else if (callq == 12 && B.isFocusable()) {
 
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
                 } else if (callq == 13 && B.isFocusable()) {
 
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
                 } else if (callq == 14 && B.isFocusable()) {
 
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
                 } else if (callq == 15 && B.isFocusable()) {
 
-
+                   Btrue();
+                   bClickedAtrue();
+                   bClickedCtrue();
+                   bClickedDtrue();
                 }
             }
         });
@@ -910,49 +1012,94 @@ public void dClikedCtrue(){
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (callq == 1 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 } else if (callq == 2 && C.isFocusable()) {
 
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
                 } else if (callq == 3 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 }else if (callq == 4 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 } else if (callq == 5 && C.isFocusable()) {
 
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
                 } else if (callq == 6 && C.isFocusable()) {
 
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
                 } else if (callq == 7 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 } else if (callq == 8 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 } else if (callq == 9 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 } else if (callq == 10 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 } else if (callq == 11 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 } else if (callq == 12 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 } else if (callq == 13 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 } else if (callq == 14 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 } else if (callq == 15 && C.isFocusable()) {
-
+                    Ctrue();
+                    cClikedAtrue();
+                    cClikedBtrue();
+                    cClikedDtrue();
 
                 }
             }
@@ -962,48 +1109,107 @@ public void dClikedCtrue(){
             @Override
             public void mouseClicked(MouseEvent e) {
                 if (callq == 1 && D.isFocusable()) {
-
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
                 } else if (callq == 2 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 3 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 }else if (callq == 4 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 5 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 6 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 7 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 8 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 9 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 10 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 11 && D.isFocusable()) {
 
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
                 } else if (callq == 12 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 13 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 14 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 } else if (callq == 15 && D.isFocusable()) {
+                    Dtrue();
+                    dClikedAtrue();
+                    dClikedBtrue();
+                    dClikedCtrue();
 
 
                 }
