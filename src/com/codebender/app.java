@@ -212,6 +212,11 @@ public void format (){
 
     // test
 
+    public void GameOver(){
+
+    }
+
+
     public void Atrue(){
 
     A.setOpaque(true);
@@ -804,48 +809,171 @@ public void dClikedCtrue(){
             public void mouseClicked(MouseEvent e) {
                 if (callq == 1 && A.isFocusable()) {
 
+                    Atrue();
+
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect1[i]));
+                    }
+
+                    if (correct1 < 0) {
+                        correct1 = 1;
+                    }
+                    if (correct1 >= 0 && correct1 < imgcorrect1.length) {
+                        point.setIcon(imagelist1[correct1]);
+                        correct1++;
+                    }
 
                 } else if (callq == 2 && A.isFocusable()) {
 
+                    Atrue();
+
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect2[i]));
+                    }
+
+                    if (correct2 < 0) {
+                        correct2 = 1;
+                    }
+                    if (correct2 >= 0 && correct2 < imgcorrect2.length) {
+                        point.setIcon(imagelist1[correct2]);
+                        correct2++;
+                    }
 
                 } else if (callq == 3 && A.isFocusable()) {
 
+                    aClickedCtrue();
 
                 }else if (callq == 4 && A.isFocusable()) {
 
+                    aClickedDtrue();
 
                 } else if (callq == 5 && A.isFocusable()) {
 
+                    aClickedBtrue();
 
                 } else if (callq == 6 && A.isFocusable()) {
 
+                    aClickedDtrue();
 
                 } else if (callq == 7 && A.isFocusable()) {
 
+                    aClickedCtrue();
 
                 } else if (callq == 8 && A.isFocusable()) {
 
+                    Atrue();
 
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect8[i]));
+                    }
+
+                    if (correct8 < 0) {
+                        correct8 = 1;
+                    }
+                    if (correct8 >= 0 && correct8 < imgcorrect8.length) {
+                        point.setIcon(imagelist1[correct8]);
+                        correct8++;
+                    }
                 } else if (callq == 9 && A.isFocusable()) {
 
+                        aClickedBtrue();
 
                 } else if (callq == 10 && A.isFocusable()) {
 
+                    Atrue();
+
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect10[i]));
+                    }
+
+                    if (correct10 < 0) {
+                        correct10 = 1;
+                    }
+                    if (correct10 >= 0 && correct10 < imgcorrect10.length) {
+                        point.setIcon(imagelist1[correct10]);
+                        correct10++;
+                    }
 
                 } else if (callq == 11 && A.isFocusable()) {
+                        Atrue();
+                    super.mouseClicked(e);
 
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect11[i]));
+                    }
 
+                    if (correct11 < 0) {
+                        correct11 = 1;
+                    }
+                    if (correct11 >= 0 && correct11 < imgcorrect11.length) {
+                        point.setIcon(imagelist1[correct11]);
+                        correct11++;
+                    }
                 } else if (callq == 12 && A.isFocusable()) {
 
+                    aClickedCtrue();
 
                 } else if (callq == 13 && A.isFocusable()) {
 
+                    Atrue();
+
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect13[i]));
+                    }
+
+                    if (correct13 < 0) {
+                        correct13 = 1;
+                    }
+                    if (correct13 >= 0 && correct13 < imgcorrect13.length) {
+                        point.setIcon(imagelist1[correct13]);
+                        correct13++;
+                    }
 
                 } else if (callq == 14 && A.isFocusable()) {
 
+                    aClickedBtrue();
 
                 } else if (callq == 15 && A.isFocusable()) {
 
+                    Atrue();
+
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect15[i]));
+                    }
+
+                    if (correct15 < 0) {
+                        correct15 = 1;
+                    }
+                    if (correct15 >= 0 && correct15 < imgcorrect15.length) {
+                        point.setIcon(imagelist1[correct15]);
+                        correct15++;
+                    }
 
                 }
             }
@@ -857,48 +985,109 @@ public void dClikedCtrue(){
             public void mouseClicked(MouseEvent e) {
                if (callq == 1 && B.isFocusable()) {
 
+                   bClickedAtrue();
 
                 } else if (callq == 2 && B.isFocusable()) {
 
+                   bClickedAtrue();
 
                 } else if (callq == 3 && B.isFocusable()) {
 
+                    bClickedCtrue();
 
                 }else if (callq == 4 && B.isFocusable()) {
 
-
+                    bClickedDtrue();
                 } else if (callq == 5 && B.isFocusable()) {
 
+                    Btrue();
+
+                   super.mouseClicked(e);
+
+                   ImageIcon[] list = new ImageIcon[1];
+                   ImageIcon[] imagelist1 = new ImageIcon[1];
+                   for (int i = 0; i < imagelist1.length; i++) {
+                       imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect5[i]));
+                   }
+
+                   if (correct5 < 0) {
+                       correct5= 1;
+                   }
+                   if (correct5 >= 0 && correct5 < imgcorrect5.length) {
+                       point.setIcon(imagelist1[correct5]);
+                       correct5++;
+                   }
 
                 } else if (callq == 6 && B.isFocusable()) {
-
+                    bClickedDtrue();
 
                 } else if (callq == 7 && B.isFocusable()) {
 
+                   bClickedCtrue();
 
                 } else if (callq == 8 && B.isFocusable()) {
 
+                    bClickedAtrue();
 
                 } else if (callq == 9 && B.isFocusable()) {
 
+                   Btrue();
+
+                   super.mouseClicked(e);
+
+                   ImageIcon[] list = new ImageIcon[1];
+                   ImageIcon[] imagelist1 = new ImageIcon[1];
+                   for (int i = 0; i < imagelist1.length; i++) {
+                       imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect9[i]));
+                   }
+
+                   if (correct9 < 0) {
+                       correct9 = 1;
+                   }
+                   if (correct9 >= 0 && correct9 < imgcorrect9.length) {
+                       point.setIcon(imagelist1[correct9]);
+                       correct9++;
+                   }
 
                 } else if (callq == 10 && B.isFocusable()) {
 
+                   bClickedAtrue();
 
                 } else if (callq == 11 && B.isFocusable()) {
 
+                    bClickedAtrue();
 
                 } else if (callq == 12 && B.isFocusable()) {
 
+                    bClickedCtrue();
 
                 } else if (callq == 13 && B.isFocusable()) {
 
+                    bClickedAtrue();
 
                 } else if (callq == 14 && B.isFocusable()) {
 
+                   Btrue();
+
+                   super.mouseClicked(e);
+
+                   ImageIcon[] list = new ImageIcon[1];
+                   ImageIcon[] imagelist1 = new ImageIcon[1];
+                   for (int i = 0; i < imagelist1.length; i++) {
+                       imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect14[i]));
+                   }
+
+                   if (correct14 < 0) {
+                       correct14 = 1;
+                   }
+                   if (correct14 >= 0 && correct14 < imgcorrect14.length) {
+                       point.setIcon(imagelist1[correct14]);
+                       correct14++;
+                   }
 
                 } else if (callq == 15 && B.isFocusable()) {
 
+                    bClickedAtrue();
 
                 }
             }
@@ -911,48 +1100,111 @@ public void dClikedCtrue(){
             public void mouseClicked(MouseEvent e) {
                 if (callq == 1 && C.isFocusable()) {
 
+                    cClikedAtrue();
 
                 } else if (callq == 2 && C.isFocusable()) {
 
+                    cClikedAtrue();
 
                 } else if (callq == 3 && C.isFocusable()) {
 
+                    Ctrue();
+
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect3[i]));
+                    }
+
+                    if (correct3 < 0) {
+                        correct3 = 1;
+                    }
+                    if (correct3 >= 0 && correct3 < imgcorrect3.length) {
+                        point.setIcon(imagelist1[correct3]);
+                        correct3++;
+                    }
 
                 }else if (callq == 4 && C.isFocusable()) {
 
+                    cClikedDtrue();
 
                 } else if (callq == 5 && C.isFocusable()) {
 
+                    cClikedDtrue();
 
                 } else if (callq == 6 && C.isFocusable()) {
 
+                    cClikedDtrue();
 
                 } else if (callq == 7 && C.isFocusable()) {
 
+                    Ctrue();
+
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect7[i]));
+                    }
+
+                    if (correct7 < 0) {
+                        correct7 = 1;
+                    }
+                    if (correct7 >= 0 && correct7 < imgcorrect7.length) {
+                        point.setIcon(imagelist1[correct7]);
+                        correct7++;
+                    }
 
                 } else if (callq == 8 && C.isFocusable()) {
 
+                    cClikedAtrue();
 
                 } else if (callq == 9 && C.isFocusable()) {
 
+                    cClikedBtrue();
 
                 } else if (callq == 10 && C.isFocusable()) {
 
+                    cClikedAtrue();
 
                 } else if (callq == 11 && C.isFocusable()) {
 
+                    cClikedAtrue();
 
                 } else if (callq == 12 && C.isFocusable()) {
 
+                    Ctrue();
+
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect12[i]));
+                    }
+
+                    if (correct12 < 0) {
+                        correct12 = 1;
+                    }
+                    if (correct12 >= 0 && correct12 < imgcorrect12.length) {
+                        point.setIcon(imagelist1[correct12]);
+                        correct12++;
+                    }
 
                 } else if (callq == 13 && C.isFocusable()) {
 
+                    cClikedAtrue();
 
                 } else if (callq == 14 && C.isFocusable()) {
 
+                    cClikedBtrue();
 
                 } else if (callq == 15 && C.isFocusable()) {
 
+                    cClikedAtrue();
 
                 }
             }
@@ -963,48 +1215,95 @@ public void dClikedCtrue(){
             public void mouseClicked(MouseEvent e) {
                 if (callq == 1 && D.isFocusable()) {
 
+                    dClikedAtrue();
 
                 } else if (callq == 2 && D.isFocusable()) {
 
+                    dClikedAtrue();
 
                 } else if (callq == 3 && D.isFocusable()) {
 
+                    dClikedCtrue();
 
                 }else if (callq == 4 && D.isFocusable()) {
 
+                    Dtrue();
+
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect4[i]));
+                    }
+
+                    if (correct4 < 0) {
+                        correct4 = 1;
+                    }
+                    if (correct4 >= 0 && correct4 < imgcorrect4.length) {
+                        point.setIcon(imagelist1[correct4]);
+                        correct4++;
+                    }
 
                 } else if (callq == 5 && D.isFocusable()) {
 
+                    dClikedBtrue();
 
                 } else if (callq == 6 && D.isFocusable()) {
 
+                    Dtrue();
+
+                    super.mouseClicked(e);
+
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect6[i]));
+                    }
+
+                    if (correct6 < 0) {
+                        correct6 = 1;
+                    }
+                    if (correct6 >= 0 && correct6 < imgcorrect6.length) {
+                        point.setIcon(imagelist1[correct6]);
+                        correct6++;
+                    }
 
                 } else if (callq == 7 && D.isFocusable()) {
 
+                    dClikedCtrue();
 
                 } else if (callq == 8 && D.isFocusable()) {
 
+                    dClikedAtrue();
 
                 } else if (callq == 9 && D.isFocusable()) {
 
+                    dClikedBtrue();
 
                 } else if (callq == 10 && D.isFocusable()) {
 
+                    dClikedAtrue();
 
                 } else if (callq == 11 && D.isFocusable()) {
 
+                    dClikedAtrue();
 
                 } else if (callq == 12 && D.isFocusable()) {
 
+                    dClikedCtrue();
 
                 } else if (callq == 13 && D.isFocusable()) {
 
+                    dClikedAtrue();
 
                 } else if (callq == 14 && D.isFocusable()) {
 
+                    dClikedBtrue();
 
                 } else if (callq == 15 && D.isFocusable()) {
 
+                    dClikedBtrue();
 
                 }
             }
