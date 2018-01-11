@@ -50,7 +50,7 @@
           <disabledTextColor color="-1"/>
           <editable value="false"/>
           <foreground color="-1"/>
-          <horizontalAlignment value="0"/>
+          <horizontalAlignment value="2"/>
           <text value=""/>
         </properties>
       </component>
@@ -64,7 +64,7 @@
           <background color="-16777216"/>
           <editable value="false"/>
           <foreground color="-1"/>
-          <horizontalAlignment value="0"/>
+          <horizontalAlignment value="2"/>
           <text value=""/>
         </properties>
       </component>
@@ -77,8 +77,9 @@
         <properties>
           <background color="-16777216"/>
           <editable value="false"/>
+          <enabled value="true"/>
           <foreground color="-1"/>
-          <horizontalAlignment value="0"/>
+          <horizontalAlignment value="2"/>
         </properties>
       </component>
       <component id="aa882" class="javax.swing.JLabel" binding="point">
@@ -100,7 +101,7 @@
           <background color="-16777216"/>
           <editable value="false"/>
           <foreground color="-1"/>
-          <horizontalAlignment value="0"/>
+          <horizontalAlignment value="2"/>
         </properties>
       </component>
       <component id="7e091" class="javax.swing.JButton" binding="go">
