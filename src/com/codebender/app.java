@@ -149,7 +149,8 @@ public class app {
 
     }
     // end of the field
-
+    //todov
+    muzike
     //Functions
 
     public void Atrue(){
@@ -1020,7 +1021,7 @@ public class app {
             }
         });
 
-
+    //todog
 
         C.addMouseListener(new MouseAdapter() {
             @Override
