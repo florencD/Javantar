@@ -27,7 +27,14 @@ public class app {
 
     //end of var
 
-
+    public void bdBlack(){
+        B.setForeground(Color.BLUE);
+        D.setForeground(Color.BLUE);
+            }
+    public void acBlack(){
+        A.setForeground(Color.BLUE);
+        C.setForeground(Color.BLUE);
+                        }
     // image
 
     int count = 0;
@@ -149,8 +156,7 @@ public class app {
 
     }
     // end of the field
-    //todov
-    muzike
+
     //Functions
 
     public void Atrue(){
@@ -684,6 +690,53 @@ public class app {
                     help1.setIcon(imagelist1[x50]);
                     x50++;
                 }
+                if(callq==1 && help1.isFocusable() ){
+                    bdBlack();
+                }
+                if(callq==2 && help1.isFocusable() ){
+                    bdBlack();
+                }
+                if(callq==3 && help1.isFocusable() ){
+                    bdBlack();
+                }
+                if(callq==4 && help1.isFocusable() ){
+                    acBlack();
+                }
+                if(callq==5 && help1.isFocusable() ){
+                    acBlack();
+                }
+                if(callq==6 && help1.isFocusable() ){
+                    acBlack();
+                }
+                if(callq==7 && help1.isFocusable() ){
+                    bdBlack();
+                }
+                if(callq==8 && help1.isFocusable() ){
+                    bdBlack();
+                }
+                if(callq==9 && help1.isFocusable() ){
+                    acBlack();
+                }
+                if(callq==10 && help1.isFocusable() ){
+                    bdBlack();
+                }
+                if(callq==11 && help1.isFocusable() ){
+                    bdBlack();
+                }
+                if(callq==12 && help1.isFocusable() ){
+                    acBlack();
+                }
+                if(callq==13 && help1.isFocusable() ){
+                    bdBlack();
+                }
+                if(callq==14 && help1.isFocusable() ){
+                    acBlack();
+                }
+                if(callq==15 && help1.isFocusable() ){
+                    bdBlack();
+                }
+
+
 
             }
         });
@@ -1021,7 +1074,7 @@ public class app {
             }
         });
 
-    //todog
+
 
         C.addMouseListener(new MouseAdapter() {
             @Override
