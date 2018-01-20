@@ -3,9 +3,10 @@ package com.codebender;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
+import sun.audio.*;
+import java.io.*;
 public class app {
-//var
+    //var
     private JPanel panel;
     private JLabel help1;
     private JLabel help2;
@@ -18,23 +19,26 @@ public class app {
     private JButton go;
     private JTextField q;
     private JButton reset;
+    private Menu menu = new Menu();
+
 
     int callq = 0;
 
-    public void init(){
-        callq = 0 ;
+    public void init() {
+        callq = 0;
     }
 
     //end of var
 
-    public void bdBlack(){
+    public void bdBlack() {
         B.setForeground(Color.BLUE);
         D.setForeground(Color.BLUE);
-            }
-    public void acBlack(){
+    }
+
+    public void acBlack() {
         A.setForeground(Color.BLUE);
         C.setForeground(Color.BLUE);
-                        }
+    }
     // image
 
     int count = 0;
@@ -112,32 +116,32 @@ public class app {
 
     // format the field of the button
 
-    public void format (){
-    A.setOpaque(true);
-    A.setForeground(Color.YELLOW);
-    A.setBackground(Color.BLUE);
+    public void format() {
+        A.setOpaque(true);
+        A.setForeground(Color.YELLOW);
+        A.setBackground(Color.BLUE);
 
-    B.setOpaque(true);
-    B.setForeground(Color.YELLOW);
-    B.setBackground(Color.BLUE);
+        B.setOpaque(true);
+        B.setForeground(Color.YELLOW);
+        B.setBackground(Color.BLUE);
 
-    C.setOpaque(true);
-    C.setForeground(Color.YELLOW);
-    C.setBackground(Color.BLUE);
+        C.setOpaque(true);
+        C.setForeground(Color.YELLOW);
+        C.setBackground(Color.BLUE);
 
-    D.setOpaque(true);
-    D.setForeground(Color.YELLOW);
-    D.setBackground(Color.BLUE);
+        D.setOpaque(true);
+        D.setForeground(Color.YELLOW);
+        D.setBackground(Color.BLUE);
 
-    q.setOpaque(true);
-    q.setForeground(Color.WHITE);
-    q.setBackground(Color.BLACK);
-}
+        q.setOpaque(true);
+        q.setForeground(Color.WHITE);
+        q.setBackground(Color.BLACK);
+    }
 
-    public void GameOver(){
+    public void GameOver() {
         q.setForeground(Color.RED);
         q.setText("Game Over");
-        callq = 1 ;
+        callq = 1;
 
         ImageIcon[] list = new ImageIcon[1];
         ImageIcon[] imagelist1 = new ImageIcon[1];
@@ -159,9 +163,9 @@ public class app {
 
     //Functions
 
-    public void Atrue(){
+    public void Atrue() {
 
-    A.setOpaque(true);
+        A.setOpaque(true);
         callq = callq + 1;
 
 
@@ -181,7 +185,7 @@ public class app {
         D.setBackground(Color.BLACK);
     }
 
-    public void aClickedBtrue(){
+    public void aClickedBtrue() {
 
         B.setOpaque(true);
         B.setForeground(Color.gray);
@@ -202,7 +206,7 @@ public class app {
         GameOver();
     }
 
-    public void aClickedCtrue(){
+    public void aClickedCtrue() {
 
         C.setOpaque(true);
         C.setForeground(Color.gray);
@@ -223,7 +227,7 @@ public class app {
         GameOver();
     }
 
-    public void aClickedDtrue(){
+    public void aClickedDtrue() {
 
         D.setOpaque(true);
         D.setForeground(Color.gray);
@@ -244,7 +248,7 @@ public class app {
         GameOver();
     }
 
-    public void Btrue(){
+    public void Btrue() {
         callq = callq + 1;
 
         B.setOpaque(true);
@@ -266,7 +270,7 @@ public class app {
 
     }
 
-    public void bClickedAtrue(){
+    public void bClickedAtrue() {
 
         A.setOpaque(true);
         A.setForeground(Color.BLACK);
@@ -285,31 +289,31 @@ public class app {
         D.setBackground(Color.BLACK);
 
         GameOver();
-        }
+    }
 
-    public void bClickedCtrue(){
+    public void bClickedCtrue() {
 
-            C.setOpaque(true);
-            C.setForeground(Color.gray);
-            C.setBackground(Color.GREEN);
-            //[221,213,202]
-            A.setOpaque(true);
-            A.setForeground(Color.WHITE);
-            A.setBackground(Color.BLACK);
+        C.setOpaque(true);
+        C.setForeground(Color.gray);
+        C.setBackground(Color.GREEN);
+        //[221,213,202]
+        A.setOpaque(true);
+        A.setForeground(Color.WHITE);
+        A.setBackground(Color.BLACK);
 
-            B.setOpaque(true);
-            B.setForeground(Color.RED);
-            B.setBackground(Color.BLACK);
+        B.setOpaque(true);
+        B.setForeground(Color.RED);
+        B.setBackground(Color.BLACK);
 
-            D.setOpaque(true);
-            D.setForeground(Color.WHITE);
-            D.setBackground(Color.BLACK);
+        D.setOpaque(true);
+        D.setForeground(Color.WHITE);
+        D.setBackground(Color.BLACK);
 
-            GameOver();
-            }
+        GameOver();
+    }
 
-    public void bClickedDtrue(){
-            if (callq == 1 && B.isFocusable()) {
+    public void bClickedDtrue() {
+        if (callq == 1 && B.isFocusable()) {
             D.setOpaque(true);
             D.setForeground(Color.gray);
             D.setBackground(Color.GREEN);
@@ -327,181 +331,222 @@ public class app {
             A.setBackground(Color.BLACK);
 
 
+            GameOver();
+        }
+    }
 
-                GameOver();
-            }
-            }
-
-    public void Ctrue(){
+    public void Ctrue() {
         callq = callq + 1;
 
         C.setOpaque(true);
-            C.setForeground(Color.gray);
-            C.setBackground(Color.GREEN);
-            //[221,213,202]
-            B.setOpaque(true);
-            B.setForeground(Color.WHITE);
-            B.setBackground(Color.BLACK);
+        C.setForeground(Color.gray);
+        C.setBackground(Color.GREEN);
+        //[221,213,202]
+        B.setOpaque(true);
+        B.setForeground(Color.WHITE);
+        B.setBackground(Color.BLACK);
 
-            A.setOpaque(true);
-            A.setForeground(Color.WHITE);
-            A.setBackground(Color.BLACK);
+        A.setOpaque(true);
+        A.setForeground(Color.WHITE);
+        A.setBackground(Color.BLACK);
 
-            D.setOpaque(true);
-            D.setForeground(Color.WHITE);
-            D.setBackground(Color.BLACK);
+        D.setOpaque(true);
+        D.setForeground(Color.WHITE);
+        D.setBackground(Color.BLACK);
 
 
+    }
 
-            }
+    public void cClikedAtrue() {
 
-    public void cClikedAtrue(){
+        A.setOpaque(true);
+        A.setForeground(Color.gray);
+        A.setBackground(Color.GREEN);
+        //[221,213,202]
+        B.setOpaque(true);
+        B.setForeground(Color.WHITE);
+        B.setBackground(Color.BLACK);
 
-            A.setOpaque(true);
-            A.setForeground(Color.gray);
-            A.setBackground(Color.GREEN);
-            //[221,213,202]
-            B.setOpaque(true);
-            B.setForeground(Color.WHITE);
-            B.setBackground(Color.BLACK);
+        C.setOpaque(true);
+        C.setForeground(Color.RED);
+        C.setBackground(Color.BLACK);
 
-            C.setOpaque(true);
-            C.setForeground(Color.RED);
-            C.setBackground(Color.BLACK);
+        D.setOpaque(true);
+        D.setForeground(Color.WHITE);
+        D.setBackground(Color.BLACK);
 
-            D.setOpaque(true);
-            D.setForeground(Color.WHITE);
-            D.setBackground(Color.BLACK);
+        GameOver();
+    }
 
-             GameOver();
-            }
+    public void cClikedBtrue() {
 
-    public void cClikedBtrue(){
+        B.setOpaque(true);
+        B.setForeground(Color.gray);
+        B.setBackground(Color.GREEN);
+        //[221,213,202]
+        A.setOpaque(true);
+        A.setForeground(Color.WHITE);
+        A.setBackground(Color.BLACK);
 
-            B.setOpaque(true);
-            B.setForeground(Color.gray);
-            B.setBackground(Color.GREEN);
-            //[221,213,202]
-            A.setOpaque(true);
-            A.setForeground(Color.WHITE);
-            A.setBackground(Color.BLACK);
+        C.setOpaque(true);
+        C.setForeground(Color.RED);
+        C.setBackground(Color.BLACK);
 
-            C.setOpaque(true);
-            C.setForeground(Color.RED);
-            C.setBackground(Color.BLACK);
+        D.setOpaque(true);
+        D.setForeground(Color.WHITE);
+        D.setBackground(Color.BLACK);
 
-            D.setOpaque(true);
-            D.setForeground(Color.WHITE);
-            D.setBackground(Color.BLACK);
+        GameOver();
+    }
 
-             GameOver();
-            }
+    public void cClikedDtrue() {
 
-    public void cClikedDtrue(){
+        D.setOpaque(true);
+        D.setForeground(Color.gray);
+        D.setBackground(Color.GREEN);
+        //[221,213,202]
+        B.setOpaque(true);
+        B.setForeground(Color.WHITE);
+        B.setBackground(Color.BLACK);
 
-            D.setOpaque(true);
-            D.setForeground(Color.gray);
-            D.setBackground(Color.GREEN);
-            //[221,213,202]
-            B.setOpaque(true);
-            B.setForeground(Color.WHITE);
-            B.setBackground(Color.BLACK);
+        C.setOpaque(true);
+        C.setForeground(Color.RED);
+        C.setBackground(Color.BLACK);
 
-            C.setOpaque(true);
-            C.setForeground(Color.RED);
-            C.setBackground(Color.BLACK);
+        A.setOpaque(true);
+        A.setForeground(Color.WHITE);
+        A.setBackground(Color.BLACK);
 
-            A.setOpaque(true);
-            A.setForeground(Color.WHITE);
-            A.setBackground(Color.BLACK);
+        GameOver();
+    }
 
-                 GameOver();
-            }
-
-    public void Dtrue(){
+    public void Dtrue() {
         callq = callq + 1;
 
         D.setOpaque(true);
-            D.setForeground(Color.gray);
-            D.setBackground(Color.GREEN);
-            //[221,213,202]
-            B.setOpaque(true);
-            B.setForeground(Color.WHITE);
-            B.setBackground(Color.BLACK);
+        D.setForeground(Color.gray);
+        D.setBackground(Color.GREEN);
+        //[221,213,202]
+        B.setOpaque(true);
+        B.setForeground(Color.WHITE);
+        B.setBackground(Color.BLACK);
 
-            C.setOpaque(true);
-            C.setForeground(Color.WHITE);
-            C.setBackground(Color.BLACK);
+        C.setOpaque(true);
+        C.setForeground(Color.WHITE);
+        C.setBackground(Color.BLACK);
 
-            A.setOpaque(true);
-            A.setForeground(Color.WHITE);
-            A.setBackground(Color.BLACK);
+        A.setOpaque(true);
+        A.setForeground(Color.WHITE);
+        A.setBackground(Color.BLACK);
 
 
-            }
+    }
 
-    public void dClikedAtrue(){
+    public void dClikedAtrue() {
 
-            A.setOpaque(true);
-            A.setForeground(Color.gray);
-            A.setBackground(Color.GREEN);
-            //[221,213,202]
-            B.setOpaque(true);
-            B.setForeground(Color.WHITE);
-            B.setBackground(Color.BLACK);
+        A.setOpaque(true);
+        A.setForeground(Color.gray);
+        A.setBackground(Color.GREEN);
+        //[221,213,202]
+        B.setOpaque(true);
+        B.setForeground(Color.WHITE);
+        B.setBackground(Color.BLACK);
 
-            C.setOpaque(true);
-            C.setForeground(Color.WHITE);
-            C.setBackground(Color.BLACK);
+        C.setOpaque(true);
+        C.setForeground(Color.WHITE);
+        C.setBackground(Color.BLACK);
 
-            D.setOpaque(true);
-            D.setForeground(Color.RED);
-            D.setBackground(Color.BLACK);
+        D.setOpaque(true);
+        D.setForeground(Color.RED);
+        D.setBackground(Color.BLACK);
 
-             GameOver();
-            }
+        GameOver();
+    }
 
-    public void dClikedBtrue(){
+    public void dClikedBtrue() {
 
-            B.setOpaque(true);
-            B.setForeground(Color.gray);
-            B.setBackground(Color.GREEN);
-            //[221,213,202]
-            A.setOpaque(true);
-            A.setForeground(Color.WHITE);
-            A.setBackground(Color.BLACK);
+        B.setOpaque(true);
+        B.setForeground(Color.gray);
+        B.setBackground(Color.GREEN);
+        //[221,213,202]
+        A.setOpaque(true);
+        A.setForeground(Color.WHITE);
+        A.setBackground(Color.BLACK);
 
-            C.setOpaque(true);
-            C.setForeground(Color.WHITE);
-            C.setBackground(Color.BLACK);
+        C.setOpaque(true);
+        C.setForeground(Color.WHITE);
+        C.setBackground(Color.BLACK);
 
-            D.setOpaque(true);
-            D.setForeground(Color.RED);
-            D.setBackground(Color.BLACK);
+        D.setOpaque(true);
+        D.setForeground(Color.RED);
+        D.setBackground(Color.BLACK);
 
-             GameOver();
-            }
+        GameOver();
+    }
 
-    public void dClikedCtrue(){
+    public void dClikedCtrue() {
 
-            C.setOpaque(true);
-            C.setForeground(Color.gray);
-            C.setBackground(Color.GREEN);
-            //[221,213,202]
-            B.setOpaque(true);
-            B.setForeground(Color.WHITE);
-            B.setBackground(Color.BLACK);
+        C.setOpaque(true);
+        C.setForeground(Color.gray);
+        C.setBackground(Color.GREEN);
+        //[221,213,202]
+        B.setOpaque(true);
+        B.setForeground(Color.WHITE);
+        B.setBackground(Color.BLACK);
 
-            A.setOpaque(true);
-            A.setForeground(Color.WHITE);
-            A.setBackground(Color.BLACK);
+        A.setOpaque(true);
+        A.setForeground(Color.WHITE);
+        A.setBackground(Color.BLACK);
 
-            D.setOpaque(true);
-            D.setForeground(Color.RED);
-            D.setBackground(Color.BLACK);
+        D.setOpaque(true);
+        D.setForeground(Color.RED);
+        D.setBackground(Color.BLACK);
 
-              GameOver();
-            }
+        GameOver();
+    }
+
+    public void aPhone() {
+        B.setForeground(Color.BLUE);
+        C.setForeground(Color.BLUE);
+        D.setForeground(Color.BLUE);
+    }
+
+    public void bPhone() {
+        A.setForeground(Color.BLUE);
+        C.setForeground(Color.BLUE);
+        D.setForeground(Color.BLUE);
+    }
+
+    public void cPhone() {
+        A.setForeground(Color.BLUE);
+        B.setForeground(Color.BLUE);
+        D.setForeground(Color.BLUE);
+
+    }
+
+    public void dPhone() {
+        A.setForeground(Color.BLUE);
+        B.setForeground(Color.BLUE);
+        C.setForeground(Color.BLUE);
+
+    }
+
+    public static void music (){
+        AudioPlayer MGP = AudioPlayer.player;
+        AudioStream BGM ;
+        AudioData MD ;
+        ContinuousAudioDataStream loop = null;
+        try{
+            BGM = new AudioStream(new FileInputStream("question.mp3"));
+            MD = BGM.getData();
+            loop = new ContinuousAudioDataStream(MD);
+        }
+        catch(IOException error){
+            MGP.start(loop);
+        }
+    }
+
+
 
     //End Functions
 
@@ -518,7 +563,7 @@ public class app {
             public void mouseClicked(MouseEvent e) {
 
                 super.mouseClicked(e);
-                if(callq == 0){
+                if (callq == 0) {
                     callq = 1;
                 } else if (callq == 1) {
                     format();
@@ -528,133 +573,105 @@ public class app {
                     C.setText("C: *public static void main(String[] args)");
                     D.setText("D: private static void main(String[] args)");
 
-                }
-
-               else if (callq == 2) {
+                } else if (callq == 2) {
                     format();
                     q.setText("String is an___?");
                     A.setText("A: *Class");
                     B.setText("B: Variable");
                     C.setText("C: Array");
                     D.setText("D: Data type");
-                }
-
-                else if (callq == 3) {
+                } else if (callq == 3) {
                     format();
                     q.setText("Which of these operators is used to allocate memory to array variable in Java?");
                     A.setText("A: malloc");
                     B.setText("B: alloc");
                     C.setText("C: *new");
                     D.setText("D: new malloc");
-                }
-
-                else if (callq == 4) {
+                } else if (callq == 4) {
                     format();
                     q.setText("Which of the following is not OOPS concept in Java?");
                     A.setText("A: Inheritance");
                     B.setText("B: Encapsulation");
                     C.setText("C: Polymorphism");
                     D.setText("D: *Compilation");
-                }
-
-                else if (callq == 5) {
+                } else if (callq == 5) {
                     format();
                     q.setText("What is the process of defining more than one method in a class differentiated by method signature?");
                     A.setText("A: Function overriding");
                     B.setText("B: *Function overloading");
                     C.setText("C: Function doubling");
                     D.setText("D: None of the mentioned");
-                }
-
-                else if (callq == 6) {
+                } else if (callq == 6) {
                     format();
                     q.setText("Which of this access specifies can be used for a class so that its members can be accessed by a different class in the same package?");
                     A.setText("A: Public");
                     B.setText("B: Protected");
                     C.setText("C: No Modifier");
                     D.setText("D: *All of the mentioned ");
-                }
-
-                else if (callq == 7) {
+                } else if (callq == 7) {
                     format();
                     q.setText("Which of the following is correct way of importing an entire package ëpkgí?");
                     A.setText("A:import pkg");
                     B.setText("B:Import pkg");
                     C.setText("C: *import pkg.* ");
                     D.setText("D:Import pkg.* ");
-                }
-
-                else if (callq == 8) {
+                } else if (callq == 8) {
                     format();
                     q.setText("What would be behaviour if constructor has a return type?");
                     A.setText("A: *Compilation error");
                     B.setText("B: Runtime error");
                     C.setText("C: Compilation and runs successfully");
                     D.setText("D: Only String return type is allowed");
-                }
-
-                else if (callq == 9) {
+                } else if (callq == 9) {
                     format();
                     q.setText("Which of these can not be used for a variable name in Java?");
                     A.setText("A: identifier");
                     B.setText("B: *keywords");
                     C.setText("C: identifier and keywords");
                     D.setText("D: none of the above");
-                }
-
-                else if (callq == 10) {
+                } else if (callq == 10) {
                     format();
                     q.setText("Which of these have highest precedence?");
                     A.setText("A: ()"); // correct
                     B.setText("B: ++");
                     C.setText("C: *");
                     D.setText("D: >>");
-                }
-
-                else if (callq == 11) {
+                } else if (callq == 11) {
                     format();
                     q.setText("Where is array stored in memory?");
                     A.setText("A: *heap space");
                     B.setText("B: stack space");
                     C.setText("C: heap space and stack space");
                     D.setText("D: first generation memory");
-                }
-
-                else if (callq == 12) {
+                } else if (callq == 12) {
                     format();
                     q.setText("Which of these is not a correct statement?");
                     A.setText("A: Every class containing abstract method must be declared abstract");
                     B.setText("B: Abstract class defines only the structure of the class not its implementation");
                     C.setText("C: *Abstract class can be initiated by new operator");
                     D.setText("D: Abstract class can be inherited");
-                }
-
-                else if (callq == 13) {
+                } else if (callq == 13) {
                     format();
                     q.setText("Which function is used to perform some action when the object is to be destroyed?");
                     A.setText("A: *finalize()");
                     B.setText("B: delete()");
                     C.setText("C: main()");
                     D.setText("D: none of the above");
-                }
-
-                else if (callq == 14) {
+                } else if (callq == 14) {
                     format();
                     q.setText("Which of these cannot be declared static?");
                     A.setText("A: class");
                     B.setText("B: *object");
                     C.setText("C: variable");
                     D.setText("D: method");
-                }
-
-                else if (callq == 15) {
+                } else if (callq == 15) {
                     format();
                     q.setText("Which of the following package stores all the simple data types in java?");
                     A.setText("A: *lang");
                     B.setText("B: java");
                     C.setText("C: util");
                     D.setText("D: java.packages");
-                } else{
+                } else {
 
                     format();
                     q.setText("You Are the New Javantar!");
@@ -690,52 +707,51 @@ public class app {
                     help1.setIcon(imagelist1[x50]);
                     x50++;
                 }
-                if(callq==1 && help1.isFocusable() ){
+                if (callq == 1 && help1.isFocusable()) {
                     bdBlack();
                 }
-                if(callq==2 && help1.isFocusable() ){
+                if (callq == 2 && help1.isFocusable()) {
                     bdBlack();
                 }
-                if(callq==3 && help1.isFocusable() ){
+                if (callq == 3 && help1.isFocusable()) {
                     bdBlack();
                 }
-                if(callq==4 && help1.isFocusable() ){
+                if (callq == 4 && help1.isFocusable()) {
                     acBlack();
                 }
-                if(callq==5 && help1.isFocusable() ){
+                if (callq == 5 && help1.isFocusable()) {
                     acBlack();
                 }
-                if(callq==6 && help1.isFocusable() ){
+                if (callq == 6 && help1.isFocusable()) {
                     acBlack();
                 }
-                if(callq==7 && help1.isFocusable() ){
+                if (callq == 7 && help1.isFocusable()) {
                     bdBlack();
                 }
-                if(callq==8 && help1.isFocusable() ){
+                if (callq == 8 && help1.isFocusable()) {
                     bdBlack();
                 }
-                if(callq==9 && help1.isFocusable() ){
+                if (callq == 9 && help1.isFocusable()) {
                     acBlack();
                 }
-                if(callq==10 && help1.isFocusable() ){
+                if (callq == 10 && help1.isFocusable()) {
                     bdBlack();
                 }
-                if(callq==11 && help1.isFocusable() ){
+                if (callq == 11 && help1.isFocusable()) {
                     bdBlack();
                 }
-                if(callq==12 && help1.isFocusable() ){
+                if (callq == 12 && help1.isFocusable()) {
                     acBlack();
                 }
-                if(callq==13 && help1.isFocusable() ){
+                if (callq == 13 && help1.isFocusable()) {
                     bdBlack();
                 }
-                if(callq==14 && help1.isFocusable() ){
+                if (callq == 14 && help1.isFocusable()) {
                     acBlack();
                 }
-                if(callq==15 && help1.isFocusable() ){
+                if (callq == 15 && help1.isFocusable()) {
                     bdBlack();
                 }
-
 
 
             }
@@ -757,9 +773,55 @@ public class app {
                     help2.setIcon(imagelist1[peopel]);
                     peopel++;
                 }
+                if (callq == 1 && help2.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 2 && help2.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 3 && help2.isFocusable()) {
+                    cPhone();
+                }
+                if (callq == 4 && help2.isFocusable()) {
+                    dPhone();
+                }
+                if (callq == 5 && help2.isFocusable()) {
+                    bPhone();
+                }
+                if (callq == 6 && help2.isFocusable()) {
+                    dPhone();
+                }
+                if (callq == 7 && help2.isFocusable()) {
+                    cPhone();
+                }
+                if (callq == 8 && help2.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 9 && help2.isFocusable()) {
+                    bPhone();
+                }
+                if (callq == 10 && help2.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 11 && help2.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 12 && help2.isFocusable()) {
+                    cPhone();
+                }
+                if (callq == 13 && help2.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 14 && help2.isFocusable()) {
+                    bPhone();
+                }
+                if (callq == 15 && help2.isFocusable()) {
+                    aPhone();
+                }
 
 
             }
+
         });
 
         help3.addMouseListener(new MouseAdapter() {
@@ -780,6 +842,54 @@ public class app {
                     help3.setIcon(imagelist1[phone]);
                     phone++;
                 }
+
+                if (callq == 1 && help3.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 2 && help3.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 3 && help3.isFocusable()) {
+                    cPhone();
+                }
+                if (callq == 4 && help3.isFocusable()) {
+                    dPhone();
+                }
+                if (callq == 5 && help3.isFocusable()) {
+                    bPhone();
+                }
+                if (callq == 6 && help3.isFocusable()) {
+                    dPhone();
+                }
+                if (callq == 7 && help3.isFocusable()) {
+                    cPhone();
+                }
+                if (callq == 8 && help3.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 9 && help3.isFocusable()) {
+                    bPhone();
+                }
+                if (callq == 10 && help3.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 11 && help3.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 12 && help3.isFocusable()) {
+                    cPhone();
+                }
+                if (callq == 13 && help3.isFocusable()) {
+                    aPhone();
+                }
+                if (callq == 14 && help3.isFocusable()) {
+                    bPhone();
+                }
+                if (callq == 15 && help3.isFocusable()) {
+                    aPhone();
+                }
+
+
             }
         });
 
@@ -831,7 +941,7 @@ public class app {
 
                     aClickedCtrue();
 
-                }else if (callq == 4 && A.isFocusable()) {
+                } else if (callq == 4 && A.isFocusable()) {
 
                     aClickedDtrue();
 
@@ -868,7 +978,7 @@ public class app {
                     }
                 } else if (callq == 9 && A.isFocusable()) {
 
-                        aClickedBtrue();
+                    aClickedBtrue();
 
                 } else if (callq == 10 && A.isFocusable()) {
 
@@ -891,7 +1001,7 @@ public class app {
                     }
 
                 } else if (callq == 11 && A.isFocusable()) {
-                        Atrue();
+                    Atrue();
                     super.mouseClicked(e);
 
                     ImageIcon[] list = new ImageIcon[1];
@@ -963,19 +1073,19 @@ public class app {
             // todov
             @Override
             public void mouseClicked(MouseEvent e) {
-               if (callq == 1 && B.isFocusable()) {
+                if (callq == 1 && B.isFocusable()) {
 
-                   bClickedAtrue();
+                    bClickedAtrue();
 
                 } else if (callq == 2 && B.isFocusable()) {
 
-                   bClickedAtrue();
+                    bClickedAtrue();
 
                 } else if (callq == 3 && B.isFocusable()) {
 
                     bClickedCtrue();
 
-                }else if (callq == 4 && B.isFocusable()) {
+                } else if (callq == 4 && B.isFocusable()) {
 
                     bClickedDtrue();
 
@@ -983,28 +1093,28 @@ public class app {
 
                     Btrue();
 
-                   super.mouseClicked(e);
+                    super.mouseClicked(e);
 
-                   ImageIcon[] list = new ImageIcon[1];
-                   ImageIcon[] imagelist1 = new ImageIcon[1];
-                   for (int i = 0; i < imagelist1.length; i++) {
-                       imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect5[i]));
-                   }
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect5[i]));
+                    }
 
-                   if (correct5 < 0) {
-                       correct5= 1;
-                   }
-                   if (correct5 >= 0 && correct5 < imgcorrect5.length) {
-                       point.setIcon(imagelist1[correct5]);
-                       correct5++;
-                   }
+                    if (correct5 < 0) {
+                        correct5 = 1;
+                    }
+                    if (correct5 >= 0 && correct5 < imgcorrect5.length) {
+                        point.setIcon(imagelist1[correct5]);
+                        correct5++;
+                    }
 
                 } else if (callq == 6 && B.isFocusable()) {
                     bClickedDtrue();
 
                 } else if (callq == 7 && B.isFocusable()) {
 
-                   bClickedCtrue();
+                    bClickedCtrue();
 
                 } else if (callq == 8 && B.isFocusable()) {
 
@@ -1012,27 +1122,27 @@ public class app {
 
                 } else if (callq == 9 && B.isFocusable()) {
 
-                   Btrue();
+                    Btrue();
 
-                   super.mouseClicked(e);
+                    super.mouseClicked(e);
 
-                   ImageIcon[] list = new ImageIcon[1];
-                   ImageIcon[] imagelist1 = new ImageIcon[1];
-                   for (int i = 0; i < imagelist1.length; i++) {
-                       imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect9[i]));
-                   }
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect9[i]));
+                    }
 
-                   if (correct9 < 0) {
-                       correct9 = 1;
-                   }
-                   if (correct9 >= 0 && correct9 < imgcorrect9.length) {
-                       point.setIcon(imagelist1[correct9]);
-                       correct9++;
-                   }
+                    if (correct9 < 0) {
+                        correct9 = 1;
+                    }
+                    if (correct9 >= 0 && correct9 < imgcorrect9.length) {
+                        point.setIcon(imagelist1[correct9]);
+                        correct9++;
+                    }
 
                 } else if (callq == 10 && B.isFocusable()) {
 
-                   bClickedAtrue();
+                    bClickedAtrue();
 
                 } else if (callq == 11 && B.isFocusable()) {
 
@@ -1048,23 +1158,23 @@ public class app {
 
                 } else if (callq == 14 && B.isFocusable()) {
 
-                   Btrue();
+                    Btrue();
 
-                   super.mouseClicked(e);
+                    super.mouseClicked(e);
 
-                   ImageIcon[] list = new ImageIcon[1];
-                   ImageIcon[] imagelist1 = new ImageIcon[1];
-                   for (int i = 0; i < imagelist1.length; i++) {
-                       imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect14[i]));
-                   }
+                    ImageIcon[] list = new ImageIcon[1];
+                    ImageIcon[] imagelist1 = new ImageIcon[1];
+                    for (int i = 0; i < imagelist1.length; i++) {
+                        imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgcorrect14[i]));
+                    }
 
-                   if (correct14 < 0) {
-                       correct14 = 1;
-                   }
-                   if (correct14 >= 0 && correct14 < imgcorrect14.length) {
-                       point.setIcon(imagelist1[correct14]);
-                       correct14++;
-                   }
+                    if (correct14 < 0) {
+                        correct14 = 1;
+                    }
+                    if (correct14 >= 0 && correct14 < imgcorrect14.length) {
+                        point.setIcon(imagelist1[correct14]);
+                        correct14++;
+                    }
 
                 } else if (callq == 15 && B.isFocusable()) {
 
@@ -1073,7 +1183,6 @@ public class app {
                 }
             }
         });
-
 
 
         C.addMouseListener(new MouseAdapter() {
@@ -1107,7 +1216,7 @@ public class app {
                         correct3++;
                     }
 
-                }else if (callq == 4 && C.isFocusable()) {
+                } else if (callq == 4 && C.isFocusable()) {
 
                     cClikedDtrue();
 
@@ -1206,7 +1315,7 @@ public class app {
 
                     dClikedCtrue();
 
-                }else if (callq == 4 && D.isFocusable()) {
+                } else if (callq == 4 && D.isFocusable()) {
 
                     Dtrue();
 
@@ -1335,17 +1444,22 @@ public class app {
         //
         //end of the reset code
 
-
-    }
-
-    public static void main(String[] args){
-        JFrame frame = new JFrame("Javantar");
-        frame.setContentPane(new app().panel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setVisible(true);
-
     }
 
 
-}
+        public static void main (String[]args){
+        music();
+            JFrame frame = new JFrame("Javantar");
+            frame.setContentPane(new app().panel);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.pack();
+            frame.setVisible(true);
+
+
+        }
+
+
+  /* */
+
+    }
+
