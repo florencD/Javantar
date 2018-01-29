@@ -3,7 +3,7 @@ package com.codebender;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import sun.audio.*;
+//import  sun.audio.*;
 import java.io.*;
 public class app {
     //var
@@ -18,7 +18,6 @@ public class app {
     private JTextField D;
     private JButton go;
     private JTextField q;
-    private JButton reset;
     private Menu menu = new Menu();
 
 
@@ -118,20 +117,20 @@ public class app {
 
     public void format() {
         A.setOpaque(true);
-        A.setForeground(Color.YELLOW);
-        A.setBackground(Color.BLUE);
+        A.setForeground(Color.WHITE);
+        A.setBackground(Color.BLACK);
 
         B.setOpaque(true);
-        B.setForeground(Color.YELLOW);
-        B.setBackground(Color.BLUE);
+        B.setForeground(Color.WHITE);
+        B.setBackground(Color.BLACK);
 
         C.setOpaque(true);
-        C.setForeground(Color.YELLOW);
-        C.setBackground(Color.BLUE);
+        C.setForeground(Color.WHITE);
+        C.setBackground(Color.BLACK);
 
         D.setOpaque(true);
-        D.setForeground(Color.YELLOW);
-        D.setBackground(Color.BLUE);
+        D.setForeground(Color.WHITE);
+        D.setBackground(Color.BLACK);
 
         q.setOpaque(true);
         q.setForeground(Color.WHITE);
@@ -531,21 +530,6 @@ public class app {
 
     }
 
-    public static void music (){
-        AudioPlayer MGP = AudioPlayer.player;
-        AudioStream BGM ;
-        AudioData MD ;
-        ContinuousAudioDataStream loop = null;
-        try{
-            BGM = new AudioStream(new FileInputStream("question.mp3"));
-            MD = BGM.getData();
-            loop = new ContinuousAudioDataStream(MD);
-        }
-        catch(IOException error){
-            MGP.start(loop);
-        }
-    }
-
 
 
     //End Functions
@@ -675,10 +659,10 @@ public class app {
 
                     format();
                     q.setText("You Are the New Javantar!");
-                    A.setText("    ");
-                    B.setText("    ");
-                    C.setText("    ");
-                    D.setText("    ");
+                    A.setText("You win 1.000bitcoin ");
+                    B.setText("You win 1.000bitcoin");
+                    C.setText("You win 1.000bitcoin");
+                    D.setText("You win 1.000bitcoin");
                     callq = 0;
                 }
 
@@ -1399,56 +1383,11 @@ public class app {
             }
         });
 
-// todof
-//        // reset the game
-//        reset.addMouseListener(new MouseAdapter() {
-//            @Override
-//            public void mouseClicked(MouseEvent e) {
-//                callq = 0;
-//                format();
-//                q.setText("Game Reset");
-//                A.setText("A:");
-//                B.setText("B:");
-//                C.setText("C:");
-//                D.setText("D");
-//                        // reset help button 2
-//                ImageIcon[] imagelist1 = new ImageIcon[1];
-//                for (int i = 0; i < imagelist1.length; i++) {
-//                    imagelist1[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + imgpeopelr[i]));
-//                }
-//
-//                if (peopelr < 0) peopelr = 1;
-//                if (peopelr >= 0 && peopelr < imgpeopelr.length) {
-//                    help2.setIcon(imagelist1[peopelr]);
-//                    peopelr++;
-//                }
-//
-//                //end of the reset help button 2
-//
-//                // reset help button 1
-//                ImageIcon[] list = new ImageIcon[1];
-//                for (int i = 0; i < list.length; i++) {
-//                    list[i] = new ImageIcon(getClass().getResource("/com/codebender/img/" + img50r[i]));
-//                }
-//
-//                if (x50r< 0) x50r = 1;
-//                if (x50r>= 0 && x50r < img50r.length) {
-//                    help1.setIcon(list[x50r]);
-//                    x50r++;
-//                }
-//
-//        //end of the reset help button 1
-//
-//            }
-//      });
-        //
-        //end of the reset code
 
     }
 
+    public static void main (String[]args){
 
-        public static void main (String[]args){
-        music();
             JFrame frame = new JFrame("Javantar");
             frame.setContentPane(new app().panel);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
