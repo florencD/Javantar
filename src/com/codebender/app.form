@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.codebender.app">
-  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="6" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel" layout-manager="GridLayoutManager" row-count="8" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="25" left="25" bottom="25" right="25"/>
     <constraints>
-      <xy x="20" y="20" width="627" height="553"/>
+      <xy x="20" y="20" width="627" height="561"/>
     </constraints>
     <properties>
       <background color="-2698554"/>
@@ -12,7 +12,7 @@
     <children>
       <component id="30527" class="javax.swing.JLabel" binding="help1">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <icon value="com/codebender/img/50.png"/>
@@ -21,7 +21,7 @@
       </component>
       <component id="ffa8f" class="javax.swing.JLabel" binding="help2">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <enabled value="true"/>
@@ -31,7 +31,7 @@
       </component>
       <component id="cf225" class="javax.swing.JLabel" binding="help3">
         <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <icon value="com/codebender/img/phone.png"/>
@@ -40,7 +40,7 @@
       </component>
       <component id="3c45" class="javax.swing.JTextField" binding="A">
         <constraints>
-          <grid row="4" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -56,7 +56,7 @@
       </component>
       <component id="e8ce8" class="javax.swing.JTextField" binding="C">
         <constraints>
-          <grid row="5" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -70,7 +70,7 @@
       </component>
       <component id="62abd" class="javax.swing.JTextField" binding="D">
         <constraints>
-          <grid row="5" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="7" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -84,7 +84,7 @@
       </component>
       <component id="aa882" class="javax.swing.JLabel" binding="point">
         <constraints>
-          <grid row="1" column="3" row-span="3" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="3" row-span="4" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <icon value="com/codebender/img/panel.png"/>
@@ -93,7 +93,7 @@
       </component>
       <component id="5f497" class="javax.swing.JTextField" binding="B">
         <constraints>
-          <grid row="4" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="6" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -106,7 +106,7 @@
       </component>
       <component id="7e091" class="javax.swing.JButton" binding="go">
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="go"/>
@@ -114,7 +114,7 @@
       </component>
       <component id="b9b7e" class="javax.swing.JTextField" binding="q">
         <constraints>
-          <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="2" fill="1" indent="0" use-parent-layout="false">
+          <grid row="4" column="0" row-span="2" col-span="3" vsize-policy="0" hsize-policy="6" anchor="2" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -123,6 +123,14 @@
           <editable value="false"/>
           <foreground color="-1"/>
           <horizontalAlignment value="0"/>
+        </properties>
+      </component>
+      <component id="6d952" class="javax.swing.JButton" binding="playSoundButton" default-binding="true">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Play Sound"/>
         </properties>
       </component>
     </children>

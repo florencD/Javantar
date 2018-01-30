@@ -1,9 +1,14 @@
 package com.codebender;
 
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-//import  sun.audio.*;
+
+import sun.applet.Main;
+import  sun.audio.*;
 import java.io.*;
 public class app {
     //var
@@ -18,6 +23,7 @@ public class app {
     private JTextField D;
     private JButton go;
     private JTextField q;
+    private JButton playSoundButton;
     private Menu menu = new Menu();
 
 
@@ -505,31 +511,47 @@ public class app {
     }
 
     public void aPhone() {
-        B.setForeground(Color.BLUE);
-        C.setForeground(Color.BLUE);
-        D.setForeground(Color.BLUE);
+        B.setForeground(Color.BLACK);
+        C.setForeground(Color.BLACK);
+        D.setForeground(Color.BLACK);
     }
 
     public void bPhone() {
-        A.setForeground(Color.BLUE);
-        C.setForeground(Color.BLUE);
-        D.setForeground(Color.BLUE);
+        A.setForeground(Color.BLACK);
+        C.setForeground(Color.BLACK);
+        D.setForeground(Color.BLACK);
     }
 
     public void cPhone() {
-        A.setForeground(Color.BLUE);
-        B.setForeground(Color.BLUE);
-        D.setForeground(Color.BLUE);
+        A.setForeground(Color.BLACK);
+        B.setForeground(Color.BLACK);
+        D.setForeground(Color.BLACK);
 
     }
 
     public void dPhone() {
-        A.setForeground(Color.BLUE);
-        B.setForeground(Color.BLUE);
-        C.setForeground(Color.BLUE);
+        A.setForeground(Color.BLACK);
+        B.setForeground(Color.BLACK);
+        C.setForeground(Color.BLACK);
 
     }
-
+    private void playSound()
+    {
+        try
+        {
+            // get the sound file as a resource out of my jar file;
+            // the sound file must be in the same directory as this class file.
+            // the input stream portion of this recipe comes from a javaworld.com article.
+            InputStream inputStream = getClass().getResourceAsStream("GameOver.WAV");
+            AudioStream audioStream = new AudioStream(inputStream);
+            AudioPlayer.player.start(audioStream);
+        }
+        catch (Exception e)
+        {
+            // a special way i'm handling logging in this application
+             e.printStackTrace();
+        }
+    }
 
 
     //End Functions
@@ -550,6 +572,7 @@ public class app {
                 if (callq == 0) {
                     callq = 1;
                 } else if (callq == 1) {
+
                     format();
                     q.setText("What is correct syntax for main method of a java class?");
                     A.setText("A: public static int main(String[] args");
@@ -560,7 +583,7 @@ public class app {
                 } else if (callq == 2) {
                     format();
                     q.setText("String is an___?");
-                    A.setText("A: *Class");
+                    A.setText("A: Class");
                     B.setText("B: Variable");
                     C.setText("C: Array");
                     D.setText("D: Data type");
@@ -582,7 +605,7 @@ public class app {
                     format();
                     q.setText("What is the process of defining more than one method in a class differentiated by method signature?");
                     A.setText("A: Function overriding");
-                    B.setText("B: *Function overloading");
+                    B.setText("B: Function overloading");
                     C.setText("C: Function doubling");
                     D.setText("D: None of the mentioned");
                 } else if (callq == 6) {
@@ -597,12 +620,12 @@ public class app {
                     q.setText("Which of the following is correct way of importing an entire package ëpkgí?");
                     A.setText("A:import pkg");
                     B.setText("B:Import pkg");
-                    C.setText("C: *import pkg.* ");
+                    C.setText("C: import pkg.* ");
                     D.setText("D:Import pkg.* ");
                 } else if (callq == 8) {
                     format();
                     q.setText("What would be behaviour if constructor has a return type?");
-                    A.setText("A: *Compilation error");
+                    A.setText("A: Compilation error");
                     B.setText("B: Runtime error");
                     C.setText("C: Compilation and runs successfully");
                     D.setText("D: Only String return type is allowed");
@@ -623,7 +646,7 @@ public class app {
                 } else if (callq == 11) {
                     format();
                     q.setText("Where is array stored in memory?");
-                    A.setText("A: *heap space");
+                    A.setText("A: heap space");
                     B.setText("B: stack space");
                     C.setText("C: heap space and stack space");
                     D.setText("D: first generation memory");
@@ -632,12 +655,12 @@ public class app {
                     q.setText("Which of these is not a correct statement?");
                     A.setText("A: Every class containing abstract method must be declared abstract");
                     B.setText("B: Abstract class defines only the structure of the class not its implementation");
-                    C.setText("C: *Abstract class can be initiated by new operator");
+                    C.setText("C: Abstract class can be initiated by new operator");
                     D.setText("D: Abstract class can be inherited");
                 } else if (callq == 13) {
                     format();
                     q.setText("Which function is used to perform some action when the object is to be destroyed?");
-                    A.setText("A: *finalize()");
+                    A.setText("A: finalize()");
                     B.setText("B: delete()");
                     C.setText("C: main()");
                     D.setText("D: none of the above");
@@ -645,13 +668,13 @@ public class app {
                     format();
                     q.setText("Which of these cannot be declared static?");
                     A.setText("A: class");
-                    B.setText("B: *object");
+                    B.setText("B: object");
                     C.setText("C: variable");
                     D.setText("D: method");
                 } else if (callq == 15) {
                     format();
                     q.setText("Which of the following package stores all the simple data types in java?");
-                    A.setText("A: *lang");
+                    A.setText("A: lang");
                     B.setText("B: java");
                     C.setText("C: util");
                     D.setText("D: java.packages");
@@ -1007,7 +1030,7 @@ public class app {
 
                 } else if (callq == 13 && A.isFocusable()) {
 
-                    Atrue();
+                   Atrue();
 
                     super.mouseClicked(e);
 
@@ -1384,6 +1407,15 @@ public class app {
         });
 
 
+        playSoundButton.addMouseMotionListener(new MouseMotionAdapter() {
+        });
+        playSoundButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                playSound();
+            }
+        });
     }
 
     public static void main (String[]args){
