@@ -1,16 +1,24 @@
 package com.codebender;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
+import javax.sound.sampled.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-import sun.applet.Main;
-import  sun.audio.*;
-import java.io.*;
-public class app {
+import java.io.File;
+import java.io.IOException;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
+
+public class app extends Application{
     //var
     private JPanel panel;
     private JLabel help1;
@@ -24,8 +32,8 @@ public class app {
     private JButton go;
     private JTextField q;
     private JButton playSoundButton;
-    private Menu menu = new Menu();
 
+    private JPanel menu;
 
     int callq = 0;
 
@@ -33,16 +41,18 @@ public class app {
         callq = 0;
     }
 
+
+
     //end of var
 
     public void bdBlack() {
-        B.setForeground(Color.BLUE);
-        D.setForeground(Color.BLUE);
+        B.setForeground(Color.BLACK);
+        D.setForeground(Color.BLACK);
     }
 
     public void acBlack() {
-        A.setForeground(Color.BLUE);
-        C.setForeground(Color.BLUE);
+        A.setForeground(Color.BLACK);
+        C.setForeground(Color.BLACK);
     }
     // image
 
@@ -144,6 +154,7 @@ public class app {
     }
 
     public void GameOver() {
+        lost();
         q.setForeground(Color.RED);
         q.setText("Game Over");
         callq = 1;
@@ -170,6 +181,8 @@ public class app {
 
     public void Atrue() {
 
+        
+        playSound();
         A.setOpaque(true);
         callq = callq + 1;
 
@@ -256,6 +269,7 @@ public class app {
     public void Btrue() {
         callq = callq + 1;
 
+        playSound();
         B.setOpaque(true);
         B.setForeground(Color.gray);
         B.setBackground(Color.GREEN);
@@ -342,7 +356,7 @@ public class app {
 
     public void Ctrue() {
         callq = callq + 1;
-
+        playSound();
         C.setOpaque(true);
         C.setForeground(Color.gray);
         C.setBackground(Color.GREEN);
@@ -427,7 +441,7 @@ public class app {
 
     public void Dtrue() {
         callq = callq + 1;
-
+        playSound();
         D.setOpaque(true);
         D.setForeground(Color.gray);
         D.setBackground(Color.GREEN);
@@ -537,20 +551,18 @@ public class app {
     }
     private void playSound()
     {
-        try
-        {
-            // get the sound file as a resource out of my jar file;
-            // the sound file must be in the same directory as this class file.
-            // the input stream portion of this recipe comes from a javaworld.com article.
-            InputStream inputStream = getClass().getResourceAsStream("GameOver.WAV");
-            AudioStream audioStream = new AudioStream(inputStream);
-            AudioPlayer.player.start(audioStream);
-        }
-        catch (Exception e)
-        {
-            // a special way i'm handling logging in this application
-             e.printStackTrace();
-        }
+        String soundName = "src/com/codebender/music/win.wav";
+        Media hit = new Media(new File(soundName).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(hit);
+        mediaPlayer.play();
+    }
+
+    private void lost()
+    {
+        String soundName = "src/com/codebender/music/lose.wav";
+        Media hit = new Media(new File(soundName).toURI().toString());
+        MediaPlayer mediaPlayer = new MediaPlayer(hit);
+        mediaPlayer.play();
     }
 
 
@@ -574,11 +586,11 @@ public class app {
                 } else if (callq == 1) {
 
                     format();
-                    q.setText("What is correct syntax for main method of a java class?");
-                    A.setText("A: public static int main(String[] args");
-                    B.setText("B: public static void main(String args)");
-                    C.setText("C: *public static void main(String[] args)");
-                    D.setText("D: private static void main(String[] args)");
+                    q.setText("Correct syntax for main method of a java class?");
+                    A.setText("A:public static void main(String[] args)");
+                    B.setText("B:public static void main(String args)");
+                    C.setText("C:public static int main(String[] args)");
+                    D.setText("D:private static void main(String[] args)");
 
                 } else if (callq == 2) {
                     format();
@@ -589,49 +601,49 @@ public class app {
                     D.setText("D: Data type");
                 } else if (callq == 3) {
                     format();
-                    q.setText("Which of these operators is used to allocate memory to array variable in Java?");
+                    q.setText("One operator is used to allocate memory to array variable?");
                     A.setText("A: malloc");
                     B.setText("B: alloc");
                     C.setText("C: *new");
                     D.setText("D: new malloc");
                 } else if (callq == 4) {
                     format();
-                    q.setText("Which of the following is not OOPS concept in Java?");
+                    q.setText("Which is not OOPS concept in Java?");
                     A.setText("A: Inheritance");
                     B.setText("B: Encapsulation");
                     C.setText("C: Polymorphism");
                     D.setText("D: *Compilation");
                 } else if (callq == 5) {
                     format();
-                    q.setText("What is the process of defining more than one method in a class differentiated by method signature?");
+                    q.setText("Process of defining more than one method differentiated by signature?");
                     A.setText("A: Function overriding");
                     B.setText("B: Function overloading");
                     C.setText("C: Function doubling");
                     D.setText("D: None of the mentioned");
                 } else if (callq == 6) {
                     format();
-                    q.setText("Which of this access specifies can be used for a class so that its members can be accessed by a different class in the same package?");
+                    q.setText("Which can be used for a class so members can be accessed by a class in the same package?");
                     A.setText("A: Public");
                     B.setText("B: Protected");
                     C.setText("C: No Modifier");
                     D.setText("D: *All of the mentioned ");
                 } else if (callq == 7) {
                     format();
-                    q.setText("Which of the following is correct way of importing an entire package ëpkgí?");
+                    q.setText("Which is correct way of importing an entire package pkg?");
                     A.setText("A:import pkg");
                     B.setText("B:Import pkg");
                     C.setText("C: import pkg.* ");
                     D.setText("D:Import pkg.* ");
                 } else if (callq == 8) {
                     format();
-                    q.setText("What would be behaviour if constructor has a return type?");
+                    q.setText("The behaviour if constructor has a return type?");
                     A.setText("A: Compilation error");
                     B.setText("B: Runtime error");
                     C.setText("C: Compilation and runs successfully");
                     D.setText("D: Only String return type is allowed");
                 } else if (callq == 9) {
                     format();
-                    q.setText("Which of these can not be used for a variable name in Java?");
+                    q.setText("Which of these can not be used for a variable name?");
                     A.setText("A: identifier");
                     B.setText("B: *keywords");
                     C.setText("C: identifier and keywords");
@@ -673,7 +685,7 @@ public class app {
                     D.setText("D: method");
                 } else if (callq == 15) {
                     format();
-                    q.setText("Which of the following package stores all the simple data types in java?");
+                    q.setText("Which of the following package stores all the simple data types?");
                     A.setText("A: lang");
                     B.setText("B: java");
                     C.setText("C: util");
@@ -1416,21 +1428,24 @@ public class app {
                 playSound();
             }
         });
-    }
+   }
 
-    public static void main (String[]args){
-
-            JFrame frame = new JFrame("Javantar");
-            frame.setContentPane(new app().panel);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.pack();
-            frame.setVisible(true);
-
-
-        }
-
-
-  /* */
+   /*
+   Implementing the abstract method of the Application class of JavaFX library.
+    */
+    @Override
+    public void start(Stage primaryStage){
 
     }
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Javantar");
+        frame.setContentPane(new app().panel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
+}
+
 
